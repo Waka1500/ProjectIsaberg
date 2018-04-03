@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:text="Rent-A-Bike"
+                android:textSize="25dp"/>
+
+            <TextView
+                android:id="@+id/username_text"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="35dp"
+                android:text="Username:"
+                android:textSize="15dp"
+                android:textAlignment="center"
+                />
+            
+            <EditText
+                android:id="@+id/username_input"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:hint="Username"
+                android:inputType="text"
+                android:textSize="15dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/password_text"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:text="Password:"
+                android:textSize="15dp"
+                android:textAlignment="center"
+                />
+
+            <EditText
+                android:id="@+id/password_input"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="80dp"
+                android:text="Login"
+                android:background="#e2edff"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:id="@+id/forgot_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Forgot "/>
+                <TextView
+                    android:id="@+id/forgot_password_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="#4286f4"
+                    android:text="Password?"
+                    />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/register_button"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="90dp"
+                android:text="Register"
+                android:background="#e2edff"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
