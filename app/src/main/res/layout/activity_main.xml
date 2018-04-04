@@ -93,6 +93,7 @@
                 android:layout_marginTop="90dp"
                 android:text="Register"
                 android:background="#e2edff"
+                android:onClick="registerButtonClicked"
                 />
 
         </LinearLayout>
