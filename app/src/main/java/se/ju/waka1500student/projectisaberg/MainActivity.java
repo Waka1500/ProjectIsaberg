@@ -24,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
         forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                System.out.println("ForgotPassword Button was clicked.");
+                forgotPasswordClicked(view);
             }
         });
     }
@@ -40,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void forgotPasswordClicked(View view) {
-
+        Intent intent = new Intent(this, ForgotPasswordActivity.class);
+        startActivity(intent);
     }
 }
 

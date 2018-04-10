@@ -18,5 +18,6 @@
         <activity android:name=".PaypalActivity"/>
         <activity android:name=".CreditcardActivity"/>
         <activity android:name=".InvoiceActivity"/>
+        <activity android:name=".ForgotPasswordActivity"/>
     </application>
 </manifest>
