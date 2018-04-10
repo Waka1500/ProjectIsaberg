@@ -37,7 +37,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="0.5"
                     android:layout_height="wrap_content"
-                    android:text="Username:"
+                    android:text="Email:"
                     android:gravity="center"/>
                 <EditText
                     android:id="@+id/register_email_input"
@@ -192,12 +192,14 @@
                     android:inputType="textPassword"/>
             </LinearLayout>
             <Button
+                android:id="@+id/next_button"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:text="Next"
                 android:layout_gravity="center"
-                android:background="#e2edff"/>
+                android:background="#e2edff"
+                android:onClick="nextButtonClicked"/>
 
         </LinearLayout>
 
