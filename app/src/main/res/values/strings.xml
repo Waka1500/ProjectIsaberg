@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ProjectIsaberg</string>
+
+    <string name="emailerror">Enter a valid email</string>
+    <string name="nameerror">Enter a valid name</string>
+    <string name="phoneerror">Enter a valid phonenumber</string>
+    <string name="passworderror">Password can not be empty, silly!</string>
 </resources>
