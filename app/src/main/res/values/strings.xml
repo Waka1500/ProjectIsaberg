@@ -5,4 +5,12 @@
     <string name="nameerror">Enter a valid name</string>
     <string name="phoneerror">Enter a valid phonenumber</string>
     <string name="passworderror">Password can not be empty, silly!</string>
+    <string name="addresserror">Address can not be empty, silly!</string>
+    <string name="ziperror">Enter a valid zip code</string>
+    <string name="cityerror">Enter a valid city name</string>
+
+
+
+
+
 </resources>

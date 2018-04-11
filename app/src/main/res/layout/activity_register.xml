@@ -25,8 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:layout_gravity="center"
-                android:text="Register"
-                />
+                android:text="Register" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -45,7 +44,8 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:inputType="textEmailAddress"/>
+                    android:inputType="textEmailAddress"
+                    android:text="testemail@gmail.com"/>
             </LinearLayout>
           
             <LinearLayout
@@ -65,7 +65,8 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:inputType="text"/>
+                    android:inputType="text"
+                    android:text="Test"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -84,7 +85,8 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:inputType="text"/>
+                    android:inputType="text"
+                    android:text="Testsson"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -103,7 +105,8 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:inputType="phone"/>
+                    android:inputType="phone"
+                    android:text="0706101010"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -170,7 +173,8 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:inputType="textPassword"/>
+                    android:inputType="textPassword"
+                    android:text="123"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -189,7 +193,8 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:inputType="textPassword"/>
+                    android:inputType="textPassword"
+                    android:text="123"/>
             </LinearLayout>
             <Button
                 android:id="@+id/next_button"

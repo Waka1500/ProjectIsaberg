@@ -3,4 +3,117 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:text="Payment Method"
+                android:textSize="25sp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:text="Invoice" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:text="Name:"
+                    android:gravity="center"/>
+                <EditText
+                    android:id="@+id/invoice_name_input"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:text="Address:"
+                    android:gravity="center"/>
+                <EditText
+                    android:id="@+id/invoice_address_input"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:text="Zip Code:"
+                    android:gravity="center"/>
+                <EditText
+                    android:id="@+id/invoice_zip_input"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="number"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:text="City:"
+                    android:gravity="center"/>
+                <EditText
+                    android:id="@+id/invoice_city_input"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="text"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/next_button"
+                android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Confirm"
+                android:layout_gravity="center"
+                android:background="#e2edff"
+                android:onClick="confirmButtonClicked"/>
+        </LinearLayout>
+
+    </ScrollView>
+
 </LinearLayout>
