@@ -1,6 +1,7 @@
 package se.ju.waka1500student.projectisaberg;
 
 import android.content.Intent;
+import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -19,8 +20,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView forgotPassword = (TextView)findViewById(R.id.forgot_password_text);
-
-
         forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void registerButtonClicked(View view) {
         System.out.println("Register Button was clicked.");
+
+       //  Intent intent = new Intent(this, NfcTask.class); //TODO TEST! , uncomment to test!. implement gui button to start nfc
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
     }
