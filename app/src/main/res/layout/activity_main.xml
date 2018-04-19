@@ -65,6 +65,7 @@
                 android:layout_marginTop="80dp"
                 android:text="Login"
                 android:background="#e2edff"
+                android:onClick="loginButtonClicked"
                 />
             <LinearLayout
                 android:layout_width="wrap_content"

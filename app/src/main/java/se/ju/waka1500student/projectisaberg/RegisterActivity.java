@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Patterns;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -41,7 +42,7 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         editTextEmail = (EditText) findViewById(R.id.register_email_input);
         editTextFirstname = (EditText) findViewById(R.id.register_firstname_input);
         editTextPhone = (EditText) findViewById(R.id.register_phone_input);
@@ -111,19 +112,19 @@ public class RegisterActivity extends AppCompatActivity {
                 {
                     if(creditcard.isChecked())
                     {
-                        Toast.makeText(this, "Validation Successfull", Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, "Validation Successfull", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(this, CreditcardActivity.class);
                         startActivity(intent);
                     }
                     if(paypal.isChecked())
                     {
-                        Toast.makeText(this, "Validation Successfull", Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, "Validation Successfull", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(this, PaypalActivity.class);
                         startActivity(intent);
                     }
                     if(invoice.isChecked())
                     {
-                        Toast.makeText(this, "Validation Successfull", Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, "Validation Successfull", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(this, InvoiceActivity.class);
                         startActivity(intent);
                     }

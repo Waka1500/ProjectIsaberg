@@ -18,11 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".PaypalActivity" />
-        <activity android:name=".CreditcardActivity" />
-        <activity android:name=".InvoiceActivity" />
-        <activity android:name=".ForgotPasswordActivity" />
+        <activity android:name=".RegisterActivity"/>
+        <activity android:name=".PaypalActivity"/>
+        <activity android:name=".CreditcardActivity"/>
+        <activity android:name=".InvoiceActivity"/>
+        <activity android:name=".ForgotPasswordActivity"/>
+        <activity android:name=".ScanNFCActivity"/>
         <activity
             android:name=".NfcTask"
             android:label="@string/title_activity_nfc_task">
@@ -30,7 +31,6 @@
                 <action android:name="android.nfc.action.TECH_DISCOVERED"/>
                 <action android:name="android.nfc.action.TAG_DISCOVERED" />
             </intent-filter>
-
         </activity>
     </application>
 

@@ -7,6 +7,8 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.TextView;
 
 /**
@@ -14,11 +16,13 @@ import android.widget.TextView;
  */
 
 public class MainActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         TextView forgotPassword = (TextView)findViewById(R.id.forgot_password_text);
         forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void loginButtonClicked(View view) {
-
+        Intent intent = new Intent(this, ScanNFCActivity.class);
+        startActivity(intent);
     }
 
     public void registerButtonClicked(View view) {
