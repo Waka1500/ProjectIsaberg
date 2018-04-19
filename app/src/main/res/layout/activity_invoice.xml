@@ -43,7 +43,8 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:inputType="text"/>
+                    android:inputType="text"
+                    android:text="Testman"/>
             </LinearLayout>
 
             <LinearLayout
@@ -62,7 +63,8 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:inputType="text"/>
+                    android:inputType="text"
+                    android:text="Teststreet"/>
             </LinearLayout>
 
             <LinearLayout
@@ -81,7 +83,8 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:inputType="number"/>
+                    android:inputType="number"
+                    android:text="12345"/>
             </LinearLayout>
 
             <LinearLayout
@@ -100,7 +103,8 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:inputType="text"/>
+                    android:inputType="text"
+                    android:text="Testing street"/>
             </LinearLayout>
 
             <Button

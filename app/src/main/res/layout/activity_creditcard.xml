@@ -44,7 +44,8 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:inputType="text"
-                    android:hint="Name"/>
+                    android:hint="Name"
+                    android:text="Testman Testsson"/>
             </LinearLayout>
 
             <LinearLayout
@@ -64,7 +65,8 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:inputType="number"
-                    android:hint="0000000000000000"/>
+                    android:hint="0000000000000000"
+                    android:text="1234123412341234"/>
             </LinearLayout>
 
             <LinearLayout
@@ -72,26 +74,30 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
 
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
                     android:gravity="center"
                     android:text="Expires:" />
-                <EditText
-                    android:id="@+id/card_expire_input"
+                <Spinner
+                    android:id="@+id/monthSpinner"
                     android:layout_width="0dp"
-                    android:layout_weight="0.7"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:editable="false"
-                    android:focusable="false"/>
-                <ImageView
-                    android:id="@+id/calendarIcon"
-                    android:layout_width="10dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="0.25"
-                    android:src="@drawable/calendar_icon"/>
+                    android:layout_weight="0.5"
+                    android:entries="@array/Months"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"/>
+                <Spinner
+                    android:id="@+id/yearSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:entries="@array/Years"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -111,7 +117,8 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:inputType="number"
-                    android:hint="000"/>
+                    android:hint="000"
+                    android:text="123"/>
             </LinearLayout>
 
             <LinearLayout
@@ -140,8 +147,7 @@
                 android:layout_height="40dp"
                 android:text="Confirm"
                 android:layout_gravity="center"
-                android:background="#e2edff"
-                android:onClick="confirmButtonClicked"/>
+                android:background="#e2edff"/>
         </LinearLayout>
 
     </ScrollView>

@@ -19,5 +19,6 @@
         <activity android:name=".CreditcardActivity"/>
         <activity android:name=".InvoiceActivity"/>
         <activity android:name=".ForgotPasswordActivity"/>
+        <activity android:name=".ScanNFCActivity"/>
     </application>
 </manifest>

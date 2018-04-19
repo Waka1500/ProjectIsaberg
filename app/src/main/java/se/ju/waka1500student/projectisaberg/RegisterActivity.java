@@ -112,19 +112,19 @@ public class RegisterActivity extends AppCompatActivity {
                 {
                     if(creditcard.isChecked())
                     {
-                        Toast.makeText(this, "Validation Successfull", Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, "Validation Successfull", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(this, CreditcardActivity.class);
                         startActivity(intent);
                     }
                     if(paypal.isChecked())
                     {
-                        Toast.makeText(this, "Validation Successfull", Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, "Validation Successfull", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(this, PaypalActivity.class);
                         startActivity(intent);
                     }
                     if(invoice.isChecked())
                     {
-                        Toast.makeText(this, "Validation Successfull", Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, "Validation Successfull", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(this, InvoiceActivity.class);
                         startActivity(intent);
                     }

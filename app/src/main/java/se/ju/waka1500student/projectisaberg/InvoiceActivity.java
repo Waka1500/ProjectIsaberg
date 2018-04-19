@@ -61,8 +61,13 @@ public class InvoiceActivity extends AppCompatActivity {
     public void submitForm(){
         if(awesomeValidation.validate()){
             Toast.makeText(this, "Registration successful!", Toast.LENGTH_LONG).show();
-            //Intent intent = new Intent(this, InvoiceActivity.class);
-            //startActivity(intent);
+            returnToMain();
         }
+    }
+
+    private void returnToMain(){
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
     }
 }

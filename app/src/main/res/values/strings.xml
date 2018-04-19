@@ -8,10 +8,43 @@
     <string name="addresserror">Address can not be empty, silly!</string>
     <string name="ziperror">Enter a valid zip code</string>
     <string name="cityerror">Enter a valid city name</string>
+    <string name="creditcarderror">Enter a valid card number</string>
+    <string name="cvcerror">Enter a cvc number</string>
+
 
     <string-array name="Cards">
         <item>Visa</item>
         <item>MasterCard</item>
+    </string-array>
+
+    <string-array name="Months">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="Years">
+        <item>2018</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+        <item>2026</item>
+        <item>2027</item>
+        <item>2028</item>
+        <item>2029</item>
+        <item>2030</item>
     </string-array>
 
 
