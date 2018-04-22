@@ -4,12 +4,16 @@ import android.content.Intent;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+import android.view.MenuItem;
 
 /**
  * Created by Tjalle on 2018-04-03.
@@ -31,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
                 forgotPasswordClicked(view);
             }
         });
+        /*DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_view);
+        final ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, "Open", "Close");
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();*/
     }
 
     public void loginButtonClicked(View view) {
@@ -50,5 +59,29 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ForgotPasswordActivity.class);
         startActivity(intent);
     }
+
+
+ /*   @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.nav_home) {
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+
+        }
+        else if (id == R.id.nav_manage) {
+            Intent intent = new Intent(this, ToolsActivity.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.nav_sign_out) {
+           // mAuth.signOut();
+        }
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }*/
 }
 

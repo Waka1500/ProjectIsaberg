@@ -11,7 +11,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
 
             <TextView
                 android:id="@+id/title_text"
@@ -37,7 +39,7 @@
                     android:layout_weight="0.5"
                     android:layout_height="wrap_content"
                     android:text="Email:"
-                    android:gravity="center"/>
+                    android:gravity="left"/>
                 <EditText
                     android:id="@+id/register_email_input"
                     android:layout_width="0dp"
@@ -58,7 +60,7 @@
                     android:layout_weight="0.5"
                     android:layout_height="wrap_content"
                     android:text="First name:"
-                    android:gravity="center"/>
+                    android:gravity="left"/>
                 <EditText
                     android:id="@+id/register_firstname_input"
                     android:layout_width="0dp"
@@ -78,7 +80,7 @@
                     android:layout_weight="0.5"
                     android:layout_height="wrap_content"
                     android:text="Last name:"
-                    android:gravity="center"/>
+                    android:gravity="left"/>
                 <EditText
                     android:id="@+id/register_lastname_input"
                     android:layout_width="0dp"
@@ -98,7 +100,7 @@
                     android:layout_weight="0.5"
                     android:layout_height="wrap_content"
                     android:text="Phone number:"
-                    android:gravity="center"/>
+                    android:gravity="left"/>
                 <EditText
                     android:id="@+id/register_phone_input"
                     android:layout_width="0dp"
@@ -119,13 +121,13 @@
                     android:layout_weight="0.5"
                     android:layout_height="wrap_content"
                     android:text="Payment method:"
-                    android:gravity="center"/>
+                    android:gravity="left"/>
                 <TextView
                     android:id="@+id/register_payment_input"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:gravity="center"/>
+                    android:gravity="left"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -166,7 +168,7 @@
                     android:layout_weight="0.5"
                     android:layout_height="wrap_content"
                     android:text="Password:"
-                    android:gravity="center"/>
+                    android:gravity="left"/>
                 <EditText
                     android:id="@+id/register_password_input"
                     android:layout_width="0dp"
@@ -186,7 +188,7 @@
                     android:layout_weight="0.5"
                     android:layout_height="wrap_content"
                     android:text="Confirm Password:"
-                    android:gravity="center"/>
+                    android:gravity="left"/>
                 <EditText
                     android:id="@+id/register_confirm_input"
                     android:layout_width="0dp"

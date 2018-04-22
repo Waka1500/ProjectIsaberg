@@ -5,19 +5,21 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Toast;
 
 /**
- * Created by Tjalle on 2018-04-19.
+ * Created by carol on 22/04/2018.
  */
 
-public class ScanNFCActivity extends AppCompatActivity {
+public class AccountInfoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nfcscan);
+        setContentView(R.layout.activity_accountinfo);
     }
-    public void accountInfoButtonClicked(View view) {
-        Intent intent = new Intent(this, AccountInfoActivity.class);
-        startActivity(intent);
+    public void editButtonClicked(View view){
+
+        Toast.makeText(this, "Click", Toast.LENGTH_LONG).show();
     }
+
 }

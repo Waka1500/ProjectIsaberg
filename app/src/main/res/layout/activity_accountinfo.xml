@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+         >
+
+            <TextView
+                android:id="@+id/accountinfo_title"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:text="Rent-A-Bike"
+                android:textSize="25dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:text="Account Information" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:background="@drawable/border"
+                android:layout_marginTop="40dp"
+              >
+                <TextView
+                    android:id="@+id/accountinfo_email_label"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:text="Email:"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/accountinfo_email"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:text="testemail@gmail.com"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:background="@drawable/border"
+                >
+                <TextView
+                    android:id="@+id/accountinfo_firstname_label"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:text="First name:"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/accountinfo_firstname"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:text="Test"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:background="@drawable/border"
+              >
+                <TextView
+                    android:id="@+id/accountinfo_lastname_label"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:text="Last name:"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/accountinfo_lastname"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:text="Testsson"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:background="@drawable/border"
+               >
+                <TextView
+                    android:id="@+id/accountinfo_phone_label"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:text="Phone number:"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/accountinfo_phone"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:text="0706101010"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:background="@drawable/border"
+                >
+                <TextView
+
+                    android:id="@+id/accountinfo_payment_label"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:text="Payment method:"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/accountinfo_payment"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:text="PayPal"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:background="@drawable/border"
+               >
+                <TextView
+                    android:id="@+id/accountinfo_debt_label"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:text="Current Debt:"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/accountinfo_debt"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:text="$17"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/editAccount_button"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Edit Account"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="#e2edff"
+                android:onClick="editButtonClicked"
+                android:layout_marginEnd="2dp"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
