@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
     public void registerButtonClicked(View view) {
         System.out.println("Register Button was clicked.");
 
-       //  Intent intent = new Intent(this, NfcTask.class); //TODO TEST! , uncomment to test!. implement gui button to start nfc
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
     }

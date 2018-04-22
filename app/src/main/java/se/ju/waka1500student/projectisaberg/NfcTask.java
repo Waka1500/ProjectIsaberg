@@ -176,7 +176,7 @@ public class NfcTask extends AppCompatPreferenceActivity {
         System.out.println("XD");
         mAdapter = NfcAdapter.getDefaultAdapter(this);
 
-       // ncfNonCompatible(); //TODO UNCOMMENT for testing no compatible nfc device!
+        ncfNonCompatible(); //TODO UNCOMMENT for testing no compatible nfc device!
 
         if (mAdapter  == null) {
             System.out.println("No NFC on device!");
@@ -211,9 +211,9 @@ public class NfcTask extends AppCompatPreferenceActivity {
 
             mPendingIntent = getActivity(this, 0, new Intent(this,
                     getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0);
-            //  Intent secondPage = new Intent(nfcClass.s, SecondPage.class);
 
-            //   GetDataFromTag(secondPage, intenter);
+            Tag tag = getIntent().getParcelableExtra(NfcAdapter.EXTRA_TAG);
+            GetDataFromTag(tag, getIntent());
             // startActivityForResult(mPendingIntent, STATE_ON);
 
 
@@ -226,21 +226,13 @@ public class NfcTask extends AppCompatPreferenceActivity {
         } else {
             startActivity(new Intent(android.provider.Settings.ACTION_WIRELESS_SETTINGS));
         }
-        if(adapt.isEnabled())
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+    return(adapt.isEnabled());
     }
     public void ncfNonCompatible()
     {
         AlertDialog.Builder a = new AlertDialog.Builder(this);
         a.setTitle("Your device is not compatible with nfc");
         a.setIcon(android.R.drawable.ic_dialog_alert);
-        //  adb.setMultiChoiceItems();
         a.setNeutralButton("Order NFC Reader online", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -287,12 +279,36 @@ public class NfcTask extends AppCompatPreferenceActivity {
     }
 
     private void GetDataFromTag(Tag tag, Intent intent) {
-        Ndef ndef = Ndef.get(tag);
+
+        String action = intent.getAction();
+        if (mAdapter.ACTION_NDEF_DISCOVERED.equals(action) || mAdapter.ACTION_TAG_DISCOVERED.equals(action) || mAdapter.ACTION_TECH_DISCOVERED.equals(action)) {
+            Parcelable[] raw = intent.getParcelableArrayExtra(mAdapter.EXTRA_NDEF_MESSAGES);
+            NdefMessage[] msg = new NdefMessage[raw.length];
+            if (raw != null) {
+                msg = new NdefMessage[raw.length];
+                for (int i = 0; i < raw.length; i++) {
+                    msg[i] = (NdefMessage) raw[i];
+                }
+            } else {
+                byte[] empty = new byte[0];
+                byte[] id = intent.getByteArrayExtra(mAdapter.EXTRA_ID);
+            }
+            StringBuilder builder = new StringBuilder();
+            for (int i = 0; i < msg.length; i++) {
+                builder.append(msg[i]);
+            }
+            Toast.makeText(getApplicationContext(), builder.toString(), Toast.LENGTH_LONG).show();
+
+        }
+
+
         try {
+            Ndef ndef = Ndef.get(tag);
             ndef.connect();
 //            txtType.setText(ndef.getType().toString());
 //            txtSize.setText(String.valueOf(ndef.getMaxSize()));
 //            txtWrite.setText(ndef.isWritable() ? "True" : "False");
+
             Parcelable[] messages = intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
 
             if (messages != null) {
@@ -305,6 +321,8 @@ public class NfcTask extends AppCompatPreferenceActivity {
                 byte[] payload = record.getPayload();
                 String text = new String(payload);
                 Log.e("tag", "vahid" + text);
+                Toast.makeText(getApplicationContext(),text , Toast.LENGTH_LONG).show();
+
                 ndef.close();
 
             }
